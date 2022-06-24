@@ -1,6 +1,23 @@
 {
   "coverage": "0%",
-  "expectCount": 0,
+  "expectCount": 10,
   "actualCount": 0,
-  "files": {}
+  "files": {
+    "src/assignment.js": {
+      "expectCount": 10,
+      "actualCount": 0,
+      "undocumentLines": [
+        8,
+        9,
+        20,
+        25,
+        36,
+        50,
+        58,
+        59,
+        67,
+        89
+      ]
+    }
+  }
 }

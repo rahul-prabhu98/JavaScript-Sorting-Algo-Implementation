@@ -564,8 +564,341 @@
     "builtinExternal": true
   },
   {
+    "__docId__": 48,
+    "kind": "file",
+    "name": "src/assignment.js",
+    "content": "\r\n/**\r\n * @desc This file contains String Reversal, Quick Sort and Binary Search Algorithms.\r\n */\r\n\r\n//*******************String Reversal************************ */\r\nconsole.log(\"********String Reversal**********\");\r\nvar String  = \"123456\";\r\nvar reverseString = \"\";\r\nvar i;\r\n\r\nfor (var i = String.length; i >= 0; i--){\r\n    reverseString += String.charAt(i);\r\n}\r\n\r\nconsole.log(reverseString);\r\n\r\n//****************Quick Sort Algorithm ******************/\r\nconsole.log(\"********Quick Sort Algorithm**********\");\r\nvar array = [54,987,65,654,6,5,45,54,23,5];\r\nconsole.log(array);\r\nresult = quicksort(array, 0, array.length-1);\r\nconsole.log(result);\r\n\r\nfunction quicksort(array, left, right){\r\n    if(left < right){\r\n        var pivot = right;\r\n        var index = partition(array, pivot, left, right);\r\n\r\n        quicksort(array, left, index - 1);\r\n        quicksort(array, index + 1, right);\r\n    }\r\n    return array;\r\n}\r\n\r\nfunction partition(array, pivot, left, right){\r\n    var pivotValue = array[pivot],\r\n        index = left;\r\n\r\n    for(var i = left; i < right; i++){\r\n        if(array[i] < pivotValue){\r\n            swap(array, i, index);\r\n            index++;\r\n        }\r\n    }\r\n    swap(array, right, index);\r\n    return index;\r\n}\r\n\r\nfunction swap(array, x, y){\r\n    var temp = array[x];\r\n    array[x] = array[y];\r\n    array[y] = temp;\r\n}\r\n\r\n//*********************Binary Search Iterative********************* */\r\nconsole.log(\"********Binary Search **********\");\r\nvar a = [1,2,3,4,5,6,7,8,9,10, 11];\r\nvar b = 5;\r\nresult = binarSearchIterative(a,b);\r\nconsole.log(result);\r\n\r\nconsole.log( \"Recurscive Execution\");\r\nresult = binarySearchRecursive(a, b, 0, a.length-1);\r\nconsole.log(result);\r\n\r\nfunction binarSearchIterative(array, x)\r\n{\r\n\r\n    var left = 0;\r\n    var right = array.length - 1;\r\n\r\n    while (left <= right)\r\n    {\r\n        var mid = Math.floor(left + ((right - left)/2));\r\n        console.log( left + \" \" + mid + \" \" + right);\r\n        if (array[mid] == x)\r\n        {return true;}\r\n        else if (x < array[mid])\r\n        {right = mid - 1;}\r\n        else\r\n        {left = mid + 1;}\r\n\r\n    }\r\n\r\n    return false;\r\n}\r\n\r\nfunction binarySearchRecursive(array , x, left, right)\r\n{\r\n\r\n    if (left > right)\r\n    {\r\n        return false;\r\n    }\r\n\r\n    var mid = Math.floor(left + ((right - left)/2));\r\n    console.log( left + \" \" + mid + \" \" + right);\r\n    if (array[mid]  == x)\r\n    {return true;}\r\n    else if (x < array[mid])\r\n    {return binarySearchRecursive(array, x, left, mid-1);}\r\n    else\r\n    {return binarySearchRecursive(array, x, mid+1, right);}\r\n\r\n}",
+    "static": true,
+    "longname": "D:/INFO 6150 Web Development/Assignments/Assignment 5/assignment-5-darshan-dedhia/src/assignment.js",
+    "access": "public",
+    "description": null,
+    "lineNumber": 1
+  },
+  {
+    "__docId__": 49,
+    "kind": "variable",
+    "name": "String",
+    "memberof": "src/assignment.js",
+    "static": true,
+    "longname": "src/assignment.js~String",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 8,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
+    "kind": "variable",
+    "name": "reverseString",
+    "memberof": "src/assignment.js",
+    "static": true,
+    "longname": "src/assignment.js~reverseString",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 9,
+    "undocument": true,
+    "type": {
+      "types": [
+        "string"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 51,
+    "kind": "variable",
+    "name": "array",
+    "memberof": "src/assignment.js",
+    "static": true,
+    "longname": "src/assignment.js~array",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 20,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 52,
+    "kind": "function",
+    "name": "quicksort",
+    "memberof": "src/assignment.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/assignment.js~quicksort",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 25,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "left",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "right",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 53,
+    "kind": "function",
+    "name": "partition",
+    "memberof": "src/assignment.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/assignment.js~partition",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 36,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "pivot",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "left",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "right",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 54,
+    "kind": "function",
+    "name": "swap",
+    "memberof": "src/assignment.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/assignment.js~swap",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 50,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "x",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "y",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": null,
+    "ignore": true
+  },
+  {
+    "__docId__": 55,
+    "kind": "variable",
+    "name": "a",
+    "memberof": "src/assignment.js",
+    "static": true,
+    "longname": "src/assignment.js~a",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 58,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number[]"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 56,
+    "kind": "variable",
+    "name": "b",
+    "memberof": "src/assignment.js",
+    "static": true,
+    "longname": "src/assignment.js~b",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 59,
+    "undocument": true,
+    "type": {
+      "types": [
+        "number"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 57,
+    "kind": "function",
+    "name": "binarSearchIterative",
+    "memberof": "src/assignment.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/assignment.js~binarSearchIterative",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 67,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "x",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "boolean"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 58,
+    "kind": "function",
+    "name": "binarySearchRecursive",
+    "memberof": "src/assignment.js",
+    "generator": false,
+    "async": false,
+    "static": true,
+    "longname": "src/assignment.js~binarySearchRecursive",
+    "access": "public",
+    "export": false,
+    "importPath": "assignment-5-darshan-dedhia",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 89,
+    "undocument": true,
+    "params": [
+      {
+        "name": "array",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "x",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "left",
+        "types": [
+          "*"
+        ]
+      },
+      {
+        "name": "right",
+        "types": [
+          "*"
+        ]
+      }
+    ],
+    "return": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
     "kind": "index",
-    "content": "",
+    "content": "# JavaScript Practise Assignment\r\nString Reversal, QuickSort and Binary Search Algorithms implemented in JavaScript.\r\n\r\n\r\n\r\n",
     "longname": "D:\\INFO 6150 Web Development\\Assignments\\Assignment 5\\assignment-5-darshan-dedhia\\README.md",
     "name": "./README.md",
     "static": true,
@@ -573,7 +906,7 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"assignment-5-darshan-dedhia\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"index.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/neu-mis-info6150-fall-2019/assignment-5-darshan-dedhia.git\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"bugs\": {\n    \"url\": \"https://github.com/neu-mis-info6150-fall-2019/assignment-5-darshan-dedhia/issues\"\n  },\n  \"homepage\": \"https://github.com/neu-mis-info6150-fall-2019/assignment-5-darshan-dedhia#readme\",\n  \"dependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"assignment-5-darshan-dedhia\",\n  \"version\": \"1.0.0\",\n  \"description\": \"\",\n  \"main\": \"./src/assignment.js\",\n  \"scripts\": {\n    \"test\": \"echo \\\"Error: no test specified\\\" && exit 1\"\n  },\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/neu-mis-info6150-fall-2019/assignment-5-darshan-dedhia.git\"\n  },\n  \"author\": \"\",\n  \"license\": \"ISC\",\n  \"bugs\": {\n    \"url\": \"https://github.com/neu-mis-info6150-fall-2019/assignment-5-darshan-dedhia/issues\"\n  },\n  \"homepage\": \"https://github.com/neu-mis-info6150-fall-2019/assignment-5-darshan-dedhia#readme\",\n  \"dependencies\": {\n    \"esdoc\": \"^1.1.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\"\n  }\n}\n",
     "longname": "D:\\INFO 6150 Web Development\\Assignments\\Assignment 5\\assignment-5-darshan-dedhia\\package.json",
     "name": "package.json",
     "static": true,

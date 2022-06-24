@@ -2,7 +2,7 @@
   "name": "assignment-5-darshan-dedhia",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./src/assignment.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
