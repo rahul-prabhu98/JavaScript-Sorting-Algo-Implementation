@@ -1,22 +1,23 @@
 {
-  "coverage": "0%",
-  "expectCount": 10,
-  "actualCount": 0,
+  "coverage": "8.33%",
+  "expectCount": 12,
+  "actualCount": 1,
   "files": {
     "src/assignment.js": {
-      "expectCount": 10,
-      "actualCount": 0,
+      "expectCount": 12,
+      "actualCount": 1,
       "undocumentLines": [
-        8,
-        9,
-        20,
-        25,
+        4,
+        17,
+        18,
+        31,
         36,
-        50,
-        58,
-        59,
-        67,
-        89
+        47,
+        61,
+        69,
+        70,
+        78,
+        100
       ]
     }
   }

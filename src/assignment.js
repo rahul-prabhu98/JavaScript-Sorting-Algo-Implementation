@@ -1,7 +1,16 @@
 
-/**
- * @desc This file contains String Reversal, Quick Sort and Binary Search Algorithms.
- */
+
+
+export default class StringReversal {
+    /**
+     * @desc This javascript implements String reversal Algorithm.
+     * @param {String} String- this is input String.
+     * @param {String} reverseString- this is output String.
+     */
+    StringReversal(String){}
+}
+
+
 
 //*******************String Reversal************************ */
 console.log("********String Reversal**********");
@@ -14,6 +23,8 @@ for (var i = String.length; i >= 0; i--){
 }
 
 console.log(reverseString);
+
+
 
 //****************Quick Sort Algorithm ******************/
 console.log("********Quick Sort Algorithm**********");

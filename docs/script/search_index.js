@@ -1,5 +1,11 @@
 window.esdocSearchIndex = [
   [
+    "assignment-5-darshan-dedhia~stringreversal",
+    "class/src/assignment.js~StringReversal.html",
+    "<span>StringReversal</span> <span class=\"search-result-import-path\">assignment-5-darshan-dedhia</span>",
+    "class"
+  ],
+  [
     "src/.external-ecmascript.js~array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
     "src/.external-ecmascript.js~Array",
@@ -286,5 +292,11 @@ window.esdocSearchIndex = [
     "file/src/assignment.js.html",
     "src/assignment.js",
     "file"
+  ],
+  [
+    "src/assignment.js~stringreversal#stringreversal",
+    "class/src/assignment.js~StringReversal.html#instance-method-StringReversal",
+    "src/assignment.js~StringReversal#StringReversal",
+    "method"
   ]
 ]

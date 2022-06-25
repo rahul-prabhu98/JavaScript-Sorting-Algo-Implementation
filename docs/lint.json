@@ -1,1 +1,39 @@
-[]
+[
+  {
+    "name": "StringReversal#StringReversal",
+    "filePath": "src/assignment.js",
+    "lines": [
+      {
+        "lineNumber": 4,
+        "line": "    /**\r"
+      },
+      {
+        "lineNumber": 5,
+        "line": "     * @desc This javascript implements String reversal Algorithm.\r"
+      },
+      {
+        "lineNumber": 6,
+        "line": "     * @param {String} String- this is input String.\r"
+      },
+      {
+        "lineNumber": 7,
+        "line": "     * @param {String} reverseString- this is output String.\r"
+      },
+      {
+        "lineNumber": 8,
+        "line": "     */\r"
+      },
+      {
+        "lineNumber": 9,
+        "line": "    StringReversal(String){}\r"
+      }
+    ],
+    "codeParams": [
+      "String"
+    ],
+    "docParams": [
+      "String-",
+      "reverseString-"
+    ]
+  }
+]
